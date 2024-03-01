@@ -8,27 +8,27 @@ This project is a booking website automation tool that includes web scraping scr
 
 Proposed directory structure
 ```
-/camp-site/
-|-- /scripts
-| |-- scraper.py # Web scraping script
-| |-- booking_handler.py # Booking handler script
-| |-- requirements.txt # Dependencies
-|-- /web
-| |-- /static
-| | |-- style.css # CSS styles
-| |-- /templates
-| | |-- index.html # Main page template
-| | |-- login.html # Login page template
-| | |-- dashboard.html # Dashboard page template
-| |-- app.py # Web interface application
-|-- /database
-| |-- db_handler.py # Database handler script
-|-- /config
-| |-- config.py # Configuration file
-|-- /kubernetes
-| |-- deployment.yaml # Kubernetes deployment configuration
-| |-- service.yaml # Kubernetes service configuration
-|-- README.md # Project README
+.
+├── scripts/
+|   ├── scraper.py # Web scraping script
+|   ├── booking_handler.py # Booking handler script
+|   └── requirements.txt # Dependencies
+├── web/
+|   ├── static/
+|   |   └── style.css # CSS styles
+|   ├── templates/
+|   |   ├── index.html # Main page template
+|   |   ├── login.html # Login page template
+|   |   └── dashboard.html # Dashboard page template
+|   └── app.py # Web interface application
+├── database/
+|   └── db_handler.py # Database handler script
+├── config/
+|   └── config.py # Configuration file
+├── kubernetes/
+|   ├── deployment.yaml # Kubernetes deployment configuration
+|   └──- service.yaml # Kubernetes service configuration
+└── README.md # Project README
 ```
 
 ## Setup
