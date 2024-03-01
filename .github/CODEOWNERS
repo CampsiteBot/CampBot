@@ -1,0 +1,13 @@
+# Global owners
+* @CampsiteBot/all-members
+
+# ----------------- #
+# Code Owner Update #
+# ----------------- #
+/.github/CODEOWNERS @robronayne
+/.github/required-reviewers.yml @robronayne
+
+# ------------- #
+# Script owners #
+# ------------- #
+/scripts/ @CampsiteBot/backend
