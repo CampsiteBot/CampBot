@@ -2,18 +2,19 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
 import time
+import sys
 
-def parse_availability(response_text, campground_name):
+def parse_availability(response_text, campground_id, start_date, end_date):
     soup = BeautifulSoup(response_text, 'html.parser')
 
     # Extract available campsites
     available_sites = soup.find_all('a', {'href': lambda x: x and 'campsites' in x})
     if available_sites:
-        print(f"\nAvailable Campsites at {campground_name}:")
+        print(f"\nAvailable Campsites at {campground_id} for {start_date} to {end_date}:")
         for site in available_sites:
             print(f"- {site.text}")
     else:
-        print(f"No available campsites found at {campground_name}.")
+        print(f"No available campsites found at {campground_id} for {start_date} to {end_date}.")
 
 def check_availability(campground, start_date, end_date):
     # Recreation.gov endpoint for the specified campground
@@ -40,21 +41,19 @@ def check_availability(campground, start_date, end_date):
 
         if response.status_code == 200:
             # Parse HTML content
-            parse_availability(response.text, campground)
+            parse_availability(response.text, campground, start_date, end_date)
         else:
             print(f"Error accessing {availability_url}. Status code: {response.status_code}")
     except Exception as e:
         print(f"An error occurred: {e}")
 
 if __name__ == "__main__":
-    import sys
-
     if len(sys.argv) != 4:
-        print("Usage: python scraper.py [Campground Name] [Start Date] [End Date]")
+        print("Usage: python scraper.py [Campground ID] [Start Date] [End Date]")
         sys.exit(1)
 
-    campground_name = sys.argv[1]
+    campground_id = sys.argv[1]
     start_date = sys.argv[2]
     end_date = sys.argv[3]
 
-    check_availability(campground_name, start_date, end_date)
+    check_availability(campground_id, start_date, end_date)

@@ -7,7 +7,12 @@
 /.github/CODEOWNERS @robronayne
 /.github/required-reviewers.yml @robronayne
 
-# ------------- #
-# Script owners #
-# ------------- #
-/scripts/ @CampsiteBot/backend
+# -------------- #
+# Backend owners #
+# -------------- #
+/web/backend/ @CampsiteBot/backend
+
+# --------------- #
+# Frontend owners #
+# --------------- #
+/web/frontend/ @CampsiteBot/frontend

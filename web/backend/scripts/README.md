@@ -21,10 +21,10 @@ This script allows you to check the availability of campsites on Recreation.gov 
 2. Run the script:
 
     ```
-    python3 scraper.py [Campground Name] [Start Date] [End Date]
+    python3 scraper.py [Campground ID] [Start Date] [End Date]
     ```
 
-Replace [Campground Name], [Start Date], and [End Date] with your desired parameters.
+Replace [Campground ID], [Start Date], and [End Date] with your desired parameters.
 
 ## Important Considerations
 
