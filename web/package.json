@@ -1,0 +1,15 @@
+{
+    "name": "campbot",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+      "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
+      "start:frontend": "cd frontend && npm start",
+      "start:backend": "cd backend && npm start",
+      "install-python": "pyright install"
+    },
+    "devDependencies": {
+      "concurrently": "^7.0.2",
+      "pyright": "^1.1.158"
+    }
+}
